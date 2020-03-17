@@ -8,6 +8,7 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_mail import Mail
 from flask_ckeditor import CKEditor
+from flask_migrate import Migrate
 
 db = SQLAlchemy()
 login_manager = LoginManager()
@@ -16,7 +17,7 @@ bootstrap = Bootstrap()
 moment = Moment()
 mail = Mail()
 ckeditor = CKEditor()
-
+migrate = Migrate()
 
 @login_manager.user_loader
 def load_user(user_id):
